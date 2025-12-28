@@ -1,0 +1,17 @@
+{
+  "name": "Mirrorpath Jekyll",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [4000],
+  "postCreateCommand": "bundle install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "shopify.ruby-lsp",
+        "sissel.shopify-liquid",
+        "anthropic.claude-code"
+      ]
+    }
+  }
+}

@@ -1,0 +1,218 @@
+// Colors
+$void: #000;
+$ghost: #fff;
+$mist: rgba(255, 255, 255, 0.6);
+$whisper: rgba(255, 255, 255, 0.3);
+
+// Typography
+$font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $void;
+  color: $mist;
+  font-family: $font-body;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 15vh 2rem 20vh;
+}
+
+// Hero section - the paradox
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .paradox {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: $ghost;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+    line-height: 2;
+
+    @media (min-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+}
+
+// Section styling
+.section {
+  padding: 8vh 0;
+}
+
+.section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $whisper;
+  margin-bottom: 2rem;
+}
+
+// Philosophy points - bold with glow
+.philosophy {
+  font-weight: 600;
+  color: $ghost;
+  font-size: 1.4rem;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  position: relative;
+  display: inline-block;
+
+  // Subtle reflection effect
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: scaleY(-1);
+    opacity: 0.08;
+    filter: blur(2px);
+    pointer-events: none;
+  }
+}
+
+// Regular text
+p {
+  margin-bottom: 1.5rem;
+}
+
+// Lists
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: $whisper;
+    }
+  }
+}
+
+// Table styling
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 1rem;
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  th {
+    color: $whisper;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+// Progressive reveal
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Cursor echo effect
+.cursor-echo {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fade-echo 0.6s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes fade-echo {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+// Footer
+footer {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  .tagline {
+    font-size: 0.9rem;
+    color: $whisper;
+    letter-spacing: 0.15em;
+  }
+}
+
+// Blockquote styling
+blockquote {
+  border-left: 2px solid $whisper;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+// Strong emphasis in content
+strong {
+  color: $ghost;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+// Definition at the end
+.definition {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 4rem 0;
+  color: $ghost;
+
+  strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

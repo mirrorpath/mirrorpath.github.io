@@ -1,0 +1,12 @@
+title: Mirrorpath
+description: "A philosophy of reflection. Who is walking? Who is watching?"
+url: "https://mirrorpath.github.io"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
