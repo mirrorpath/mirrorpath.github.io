@@ -63,13 +63,6 @@ On a mirrorpath:
 - You can't hide behind novelty
 - Every step says: "Yes, this is me."
 
-This is a high-responsibility philosophy:
-
-- No victimhood
-- No borrowed narratives
-- No performative originality
-- Just alignment.
-
 ## 6. Mirrorpath as a Life Strategy
 
 Living a mirrorpath means:
