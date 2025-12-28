@@ -15,8 +15,21 @@
     {{ content }}
   </main>
 
+  <nav class="scroll-indicator">
+    <div class="dot active" data-section="0"></div>
+    <div class="dot" data-section="1"></div>
+    <div class="dot" data-section="2"></div>
+    <div class="dot" data-section="3"></div>
+    <div class="dot" data-section="4"></div>
+  </nav>
+
+  <div class="scroll-arrow">
+    <span></span>
+  </div>
+
   <footer>
     <span class="tagline">Two paths. One mirror.</span>
+    <a href="mailto:hello@mirrorpath.io" class="contact">hello@mirrorpath.io</a>
   </footer>
 
   <script>
@@ -33,6 +46,48 @@
     });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Scroll indicator - track active section
+    const sections = document.querySelectorAll('.hero, .section');
+    const dots = document.querySelectorAll('.scroll-indicator .dot');
+    const scrollArrow = document.querySelector('.scroll-arrow');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target);
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+          });
+          // Hide arrow on last section
+          if (index === sections.length - 1) {
+            scrollArrow.classList.add('hidden');
+          } else {
+            scrollArrow.classList.remove('hidden');
+          }
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // Click on dots to navigate
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        sections[i]?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Click arrow to go to next section
+    scrollArrow.addEventListener('click', () => {
+      const currentIndex = Array.from(dots).findIndex(dot => dot.classList.contains('active'));
+      const nextSection = sections[currentIndex + 1];
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
 
     // Subtle cursor echo effect
     let lastX = 0, lastY = 0;

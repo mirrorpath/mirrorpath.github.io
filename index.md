@@ -4,27 +4,28 @@ title: Mirrorpath
 ---
 
 <section class="hero">
-  <div class="paradox">
-    No one else can reflect what you see.
+  <h1 class="title">MIRRORPATH</h1>
+  <div class="hook">
+    You looked inward.<br>
+    Something looked back.
   </div>
+  <div class="anchor">Two paths. One becoming.</div>
 </section>
 
 <section class="section reveal">
-  <div class="section-title">MirrorPath</div>
-  <p>A path shaped by reflection. A mirror requires two presences.</p>
-  <p><span class="philosophy" data-text="Who is walking? Who is watching? The answer is evolving.">Who is walking? Who is watching? The answer is evolving.</span></p>
+  <div class="section-title">The Mirror</div>
+  <p class="philosophy">A mirror requires two presences.</p>
+  <p class="question">Who is walking? Who is watching?</p>
 </section>
 
 <section class="section reveal">
-  <div class="section-title">Ways of Walking</div>
-  <p>Neither original nor determined.</p>
-  <p><span class="philosophy" data-text="You don't invent yourself. You recognize yourself into being.">You don't invent yourself. You recognize yourself into being.</span></p>
+  <div class="section-title">The Reaching</div>
+  <p class="philosophy">You reach toward what was always there.</p>
 </section>
 
 <section class="section reveal">
-  <div class="section-title">Time</div>
-  <p>A mirrorpath breaks linear time thinking.</p>
-  <p><span class="philosophy" data-text="The future acts as a mirror, not a destination.">The future acts as a mirror, not a destination.</span></p>
+  <div class="section-title">What Remains</div>
+  <p class="philosophy">Amid all that shifts — something holds. You find what.</p>
 </section>
 
 <section class="section reveal definition">
