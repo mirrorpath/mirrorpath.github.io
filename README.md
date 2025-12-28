@@ -78,13 +78,6 @@ Living a mirrorpath means:
 - Designing systems that reflect your values
 - Letting contradictions surface instead of suppressing them
 
-It's especially resonant for:
-
-- Founders
-- Leaders
-- Deep technical builders
-- People who feel "ahead" but slightly out of sync with their environment
-
 ## 7. The Paradox (The Best Part)
 
 > The more honestly you walk a mirrorpath,
